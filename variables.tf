@@ -1,5 +1,5 @@
 variable "aws_region" {
   type = "string"
-  description = "VPC region"
+  description = "env region"
   default = "us-east-1"
 }
