@@ -5,6 +5,16 @@ provider "aws" {
 }
 
 resource "aws_instance" "testmachine" {
-  ami = ""
-  instance_type = ""
+  ami = "ami-009d6802948d06e52"
+  instance_type = "t2.micro"
+  key_name = "ec2_key"
+  vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
+  tags {
+    Name = "testmachine",
+    Owner = "Roshan Sawant"
+  }
+}
+
+output "instance_out" {
+  value = "${aws_instance.testmachine.public_ip}"
 }
