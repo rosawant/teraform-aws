@@ -1,4 +1,2 @@
 # AWS instance setup with terraform
-asfjn
-
-nsdlk
+Creatin EC2 instances with Terraform
